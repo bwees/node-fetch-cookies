@@ -84,7 +84,14 @@ async function fetch(cookieJars, url, options) {
     return result;
 }
 
-export default fetch;
+function nfc() {
+    return {
+        fetch: fetch,
+        cj: CookieJar
+    }
+}
+
+export default nfc;
 
 export {
     fetch,
